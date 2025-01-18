@@ -46,7 +46,7 @@ export default function Home() {
             </div>
             <h1 className="text-6xl font-extrabold tracking-tight mb-8">
               Building the future with
-              <span className="block text-primary highlight-gradient">modern web technologies</span>
+              <span className="block text-primary ">modern web technologies</span>
             </h1>
             <p className="text-xl text-muted-foreground mb-12 max-w-2xl mx-auto">
               Senior software developer specializing in creating scalable, user-friendly solutions 
@@ -65,31 +65,33 @@ export default function Home() {
         </div>
       </div>
 
-      {/* Skills Section */}
-      <section className="py-24 relative overflow-hidden">
-        <div className="max-w-5xl mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold mb-4">Technical Expertise</h2>
-            <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-              A comprehensive toolkit of modern technologies and frameworks
-              for building exceptional digital experiences.
-            </p>
-          </div>
-          <div className="infinite-scroll overflow-hidden">
-            <div className="flex gap-4 whitespace-nowrap">
-              {[...skills, ...skills].map((skill, i) => (
-                <Badge 
-                  key={i}
-                  variant="outline" 
-                  className="py-2 px-4 text-sm border-primary/20"
-                >
-                  {skill}
-                </Badge>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
+{/* Skills Section */}
+<section className="py-24 relative overflow-hidden">
+  <div className="max-w-5xl mx-auto px-4">
+    <div className="text-center mb-16">
+      <h2 className="text-3xl font-bold mb-4">Technical Expertise</h2>
+      <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
+        A comprehensive toolkit of modern technologies and frameworks
+        for building exceptional digital experiences.
+      </p>
+    </div>
+
+    <div className="group overflow-hidden relative">
+      <div className="flex gap-4 whitespace-nowrap animate-scroll-right group-hover:[animation-play-state:paused]">
+        {[...skills, ...skills].map((skill, i) => (
+          <Badge
+            key={i}
+            variant="outline"
+            className="py-2 px-4 text-sm border-primary/20"
+          >
+            {skill}
+          </Badge>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>
+
 
       {/* Projects Section */}
       <section className="py-24 bg-secondary/50">

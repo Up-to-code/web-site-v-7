@@ -100,3 +100,16 @@
   background-size: 100% 0.5em;
   background-position: 0 88%;
 }
+
+@keyframes scroll-right {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+.animate-scroll-right {
+  animation: scroll-right 15s linear infinite;
+}
